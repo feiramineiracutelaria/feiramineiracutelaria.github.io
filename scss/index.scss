@@ -1,0 +1,21 @@
+/**
+
+ **/
+// base
+@import "bootstrap/dist/css/bootstrap-grid";
+@import "base/base";
+@import "base/mixins";
+@import "base/variables";
+@import "base/keyframes";
+@import "global/global";
+@import "../fonts/icomoon/style.css";
+
+// page components
+@import "blocks/common/header";
+@import "pages/index/hero";
+@import "pages/index/about";
+@import "pages/index/services";
+@import "pages/index/schedule";
+@import "pages/index/blog";
+@import "blocks/common/footer";
+@import "pages/index/modal";
