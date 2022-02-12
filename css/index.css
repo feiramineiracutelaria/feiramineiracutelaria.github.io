@@ -8850,7 +8850,8 @@ img {
 
 .hero_content {
     position: relative;
-    z-index: 10
+    z-index: 10;
+    padding: 20px;
 }
 
 .hero_content-text {
