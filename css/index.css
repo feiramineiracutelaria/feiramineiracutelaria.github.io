@@ -9675,3 +9675,87 @@ img.small {
     color: #C4161C;
     font-size: 40px;
 }
+
+
+
+
+
+/* Isolamento do CSS */
+        .premio-facas-wrapper {
+            /* Fundo transparente conforme solicitado */
+            background-color: transparent; 
+            font-family: "Arial Black", Arial, sans-serif;
+            padding: 20px;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        .premio-facas-wrapper * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .premio-facas-container {
+            max-width: 1000px;
+            margin: 100px auto;
+            border: 2px solid #ffffff; /* Borda branca ao redor */
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .premio-facas-title {
+            color: #ffe600; /* Amarelo vibrante */
+            font-size: 2.8rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 1.2;
+            margin-bottom: 40px;
+            /* Sombra para dar destaque caso o fundo atrás seja claro ou texturizado */
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.9);
+        }
+
+        .premio-facas-categories {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .premio-facas-category-item {
+            color: #ffffff;
+            font-size: 1.6rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .premio-facas-container {
+                padding: 30px 15px;
+            }
+            .premio-facas-title {
+                font-size: 1.8rem;
+                margin-bottom: 30px;
+            }
+            .premio-facas-categories {
+                gap: 20px;
+            }
+            .premio-facas-category-item {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .premio-facas-title {
+                font-size: 1.5rem;
+            }
+            .premio-facas-categories {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
