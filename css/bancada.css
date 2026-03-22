@@ -1,0 +1,113 @@
+/* Isolamento do CSS: aplicado apenas dentro do wrapper principal */
+        .expo-bancada-wrapper {
+            background-color: #5c5c5c;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .expo-bancada-wrapper * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .expo-bancada-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .expo-bancada-main-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 50px;
+            letter-spacing: 1px;
+        }
+
+        .expo-bancada-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 60px;
+        }
+
+        .expo-bancada-info {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .expo-bancada-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .expo-bancada-subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
+        .expo-bancada-area {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+
+        .expo-bancada-area strong {
+            font-weight: bold;
+        }
+
+        .expo-bancada-price-badge {
+            display: inline-block;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .expo-bancada-diagram {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        /* SVG Styles com prefixo */
+        .expo-bancada-shape {
+            fill: #aecb1c; /* Verde lima */
+            stroke: #1a1a1a;
+            stroke-width: 2;
+        }
+
+        .expo-bancada-measure-line {
+            stroke: #e85d22; /* Laranja/Vermelho */
+            stroke-width: 2;
+        }
+
+        .expo-bancada-measure-text {
+            fill: #ffffff;
+            font-size: 15px;
+            font-weight: bold;
+            text-anchor: middle;
+            dominant-baseline: middle;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Responsividade isolada */
+        @media (max-width: 768px) {
+            .expo-bancada-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 30px;
+            }
+            .expo-bancada-diagram {
+                width: 100%;
+                justify-content: center;
+            }
+            .expo-bancada-main-title {
+                font-size: 2.2rem;
+            }
+        }
