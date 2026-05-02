@@ -3120,7 +3120,8 @@ img {
 }
 
 .hero {
-    height: 100vh;
+    height: calc(-112px + 100vh);
+    background-image: url(../img/bg1.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -3128,6 +3129,7 @@ img {
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
     position: relative
+
 }
 
 .hero_slider {
@@ -4248,6 +4250,7 @@ img.small {
     background: rgba(255,255,255,0.025);
     border: 1px solid rgba(255,255,255,0.04);
     transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    cursor: default;
 }
 .blog_recent-post_wrapper:hover {
     transform: translateY(-8px);
