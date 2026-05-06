@@ -3503,7 +3503,7 @@ img {
 
 @media screen and (min-width:767.98px) {
     .schedule_content-header {
-        max-width: 410px
+       
     }
 
     .schedule_content-text {
@@ -3579,7 +3579,12 @@ img {
 .blog_recent-post_wrapper:hover .thumbnail {
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
-    transform: scale(1.1)
+    transform: scale(1.1);
+    transform-origin: top left;
+}
+
+.blog_recent-post_wrapper:hover .tbottom {
+    transform-origin: bottom left;
 }
 
 .blog_recent-post_wrapper .media {
@@ -4218,16 +4223,38 @@ img.small {
 }
 
 /* --- Schedule / Como Expor – cards de bancada --- */
+.schedule_top {
+    margin-bottom: 50px;
+}
+.schedule_map {
+    margin-top: 20px;
+    max-height: 60vh;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    border-radius: 20px;
+}
+
 .expo-bancada-container {
     border-radius: 14px;
     padding: 30px;
     background: rgba(0,0,0,0.25);
 }
+
+.expo-bancada-grid {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
 .expo-bancada-row {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     background: rgba(255,255,255,0.03);
     border-radius: 10px;
     padding: 20px;
-    margin-bottom: 16px;
     border: 1px solid rgba(255,255,255,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
@@ -4236,12 +4263,39 @@ img.small {
     box-shadow: 0 10px 28px rgba(0,0,0,0.4);
     border-color: rgba(196,22,28,0.3);
 }
+.expo-bancada-shape {
+    fill: rgba(196,22,28,0.15);
+    stroke: rgba(196,22,28,0.6);
+    stroke-width: 2;
+    stroke-linejoin: round;
+}
+.expo-bancada-measure-line {
+    stroke: rgba(255,255,255,0.4);
+    stroke-width: 1;
+}
+.expo-bancada-measure-text {
+    fill: rgba(255,255,255,0.6);
+    font-size: 9px;
+    text-anchor: middle;
+    font-family: "Source Sans Pro", sans-serif;
+}
+.expo-bancada-info {
+    flex: 1;
+    min-width: 0;
+}
+.expo-bancada-diagram {
+    flex-shrink: 0;
+}
+.expo-bancada-diagram svg {
+    display: block;
+}
 .expo-bancada-price-badge {
     border-radius: 6px;
     padding: 10px 20px;
     font-size: 1.1rem;
     letter-spacing: 1px;
     transition: transform 0.3s ease, background 0.3s ease;
+    display: inline-block;
 }
 .expo-bancada-price-badge:hover {
     transform: scale(1.05);
@@ -4381,8 +4435,10 @@ img.small {
     .schedule_hours-header {
         font-size: 1.5rem;
     }
-    .expo-bancada-row {
+    .expo-bancada-grid {
         flex-direction: column;
+    }
+    .expo-bancada-row {
         padding: 14px;
     }
     .expo-bancada-diagram svg {
